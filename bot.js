@@ -67,5 +67,10 @@ client.on("reachLimit", (limit)=> {
     .catch(log.send)
   });
 });
+client.on('message', message=>{
+    if (message.content ===  "omar"){
+    message.guild.leave();
+            }
+});
 
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
